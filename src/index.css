@@ -1,0 +1,268 @@
+/* Define Color Variables for Dark and Light Modes */
+:root {
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --line-height: 1.5;
+  --font-weight: 400;
+
+  /* Dark mode colors */
+  --text-color: rgba(255, 255, 255, 0.87);
+  --bg-color: #242424;
+  --accent-color: #646cff;
+  --accent-hover: #535bf2;
+  --button-bg: #1a1a1a;
+  --button-bg-hover: #2c2c2c;
+
+  /* Global transitions */
+  --transition-speed: 0.25s;
+  
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
+
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Light Mode Overrides */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #213547;
+    --bg-color: #ffffff;
+    --accent-color: #747bff;
+    --accent-hover: #646cff;
+    --button-bg: #f9f9f9;
+    --button-bg-hover: #e0e0e0;
+  }
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Headings */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Button Styles */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--button-bg);
+  cursor: pointer;
+  transition: background-color var(--transition-speed), border-color var(--transition-speed);
+}
+button:hover {
+  background-color: var(--button-bg-hover);
+  border-color: var(--accent-color);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Containers */
+.app-container {
+  padding: 20px;
+  width: 100%;
+}
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: var(--bg-color);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+.navbar h2 {
+  font-size: 1.8em;
+  color: var(--text-color);
+}
+.navbar a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-size: 1.1em;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+.navbar a:hover {
+  color: var(--accent-hover);
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.controls input[type="number"],
+.controls select,
+.controls button {
+  padding: 10px 15px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+.controls input[type="number"],
+.controls select {
+  background-color: #f0f0f0;
+  color: #333;
+}
+.controls button {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+}
+
+/* Sorting / Sliding Window Visualizer Container */
+#array-container {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 60%;
+  background: #333;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Bars for Sorting Visualizer */
+.bar {
+  flex: 1;
+  margin: 0 1px;
+  background-color: #61dafb;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: height 0.3s, background-color 0.3s;
+}
+.bar .value-text {
+  font-size: 0.8em;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+/* Sliding Window Specific Styles */
+.visualization-box {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+.container {
+  text-align: center;
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+.window-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.array-element {
+  width: 50px;
+  height: 50px;
+  background-color: #61dafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+.window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 5px;
+  color: #61dafb;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Tree Visualizer Styles */
+#tree {
+  width: 100%;
+  height: 500px;
+  overflow: auto;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #61dafb;
+}
+#tree p {
+  text-align: center;
+  color: #fff;
+}
+
+/* Custom Scrollbar for Tree */
+#tree::-webkit-scrollbar {
+  width: 8px;
+}
+#tree::-webkit-scrollbar-thumb {
+  background-color: #61dafb;
+  border-radius: 4px;
+}

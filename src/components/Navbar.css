@@ -1,0 +1,32 @@
+/* Navbar.css */
+
+/* Container styles for the Navbar */
+.navbar {
+  background-color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Styling for the title */
+.navbar h2 {
+  margin: 0;
+  color: #1d2b64;
+}
+
+/* Link styles within the Navbar */
+.navbar a {
+  text-decoration: none;
+  color: #1d2b64;
+  font-size: 1.1em;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+/* Hover state for Navbar links */
+.navbar a:hover {
+  color: #21a1f1;
+}
