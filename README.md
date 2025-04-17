@@ -4,7 +4,7 @@ Welcome to **DSA Visualizer**, an interactive web-based tool to help you visuali
 
 ## 🌍 Live Website
 
-🔗 [View the Live DSA Visualizer](https://github.com/riteshpalk9/DebtSettlerWebApp?tab=readme-ov-file)
+🔗 [View the Live DSA Visualizer](https://dsa-visualizer-xi-cyan.vercel.app/)
 
 ## 🌐 Features
 
